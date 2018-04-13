@@ -1,0 +1,29 @@
+<div class="">
+  <h1>List of chapter of {{model.nameBook}}</h1>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th><h2>chapter</h2></th>
+      <th><h2>ordering</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.chapterBook as |chapter|}}
+      <tr>
+        <td>
+          {{#link-to 'chapter'}}
+              {{chapter.title}}
+          {{/link-to}}
+        </td>
+        <td>
+          {{#link-to 'chapter'}}
+              {{chapter.ordering}}
+          {{/link-to}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}

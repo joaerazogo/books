@@ -1,0 +1,40 @@
+<h1>Books:</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>datePublished</th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  {{#each model as |book|}}
+    <tbody>
+      <tr>
+        <td>
+          {{#link-to 'book.books' book.id}}
+            {{book.title}}
+          {{/link-to}}
+        </td>
+        <td>
+          {{book.datePublished}}
+        </td>
+        <td>
+          {{#link-to 'book.books.edit' book.id}}
+            <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+              <i class="material-icons right">send</i>
+            </button>
+          {{/link-to}}
+        </td>
+        <td>
+          {{#link-to 'book.books.delete' book.id}}
+            <button class="btn waves-effect waves-light" type="submit" name="action">Delete
+              <i class="material-icons right">send</i>
+            </button>
+          {{/link-to}}
+        </td>
+      </tr>
+    </tbody>
+  {{/each}}
+</table>
+{{outlet}}

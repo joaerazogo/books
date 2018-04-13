@@ -1,0 +1,41 @@
+<div class="">
+  <h1>List of books of {{model.authorName}}</h1>
+  <h2>The author with name {{model.authorName}} have {{model.auxnum}} books</h2>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th><h2>book</h2></th>
+      <th><h2>author</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model.books as |book|}}
+    <tr>
+      <td>
+        {{#link-to 'book.books' book.id}}
+              {{book.title}}
+        {{/link-to}}
+      </td>
+      <td>
+        {{#link-to 'author'}}
+              {{model.authorName}}
+        {{/link-to}}
+      </td>
+      <td>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+          <i class="material-icons right">send</i>
+        </button>
+      </td>
+      <td>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Delete
+          <i class="material-icons right">send</i>
+        </button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

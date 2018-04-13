@@ -1,5 +1,27 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<nav>
+  <div class="nav-wrapper">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li>
+        {{#link-to 'author'}}
+          List of Autors
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'book'}}
+          List of Books
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'chapter'}}
+          List of chapter
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'photo'}}
+          List of photo
+        {{/link-to}}
+      </li>
+    </ul>
+  </div>
+</nav>
 {{outlet}}
