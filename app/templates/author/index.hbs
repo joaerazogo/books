@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>dateOfBitrh</th>
+      <th>dateOfDeath</th>
+    </tr>
+  </thead>
+{{#each model as |author|}}
+    <tbody>
+      <tr>
+        <td>
+          {{#link-to 'author.authors' author.id}}
+            {{author.name}}
+          {{/link-to}}
+        </td>
+        <td>
+          {{author.dateOfBitrh}}
+        </td>
+        <td>
+          {{author.dateOfDeath}}
+        </td>
+      </tr>
+    </tbody>
+{{/each}}
+</table>
+{{outlet}}

@@ -1,9 +1,17 @@
-{{#each model as |chapter|}}
-  <div class="">
-      {{chapter.title}}
-  </div>
-  <div class="">
-      {{chapter.ordering}}
-  </div>
-{{/each}}
+<table border="5">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Ordering</th>
+    </tr>
+  </thead>
+  {{#each model as |chapter|}}
+  <tbody>
+    <tr>
+      <td>{{chapter.title}}</td>
+      <td>{{chapter.ordering}}</td>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>
 {{outlet}}

@@ -11,15 +11,10 @@ Router.map(function() {
     this.route('authors', {path: '/:id'});
   });
   this.route('book', function() {
-    this.route('books', {path: '/:id'}, function() {
-      this.route('edit');
-      this.route('delete');
-    });
+    this.route('books', {path: '/:id'}, function() {});
   });
   this.route('chapter');
   this.route('photo');
-
-  this.route('edit', function() {});
   //this.route('books');
 });
 
