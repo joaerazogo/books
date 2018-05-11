@@ -11,11 +11,18 @@ Router.map(function() {
     this.route('authors', {path: '/:id'});
   });
   this.route('book', function() {
-    this.route('books', {path: '/:id'}, function() {});
+    this.route('books', { path: '/:id' }, function() {
+      this.route('delete', function() {
+        this.route('deletebook');
+      });
+      this.route('edit');
+    });
   });
   this.route('chapter');
   this.route('photo');
   //this.route('books');
+
+  this.route('delete', function() {});
 });
 
 export default Router;

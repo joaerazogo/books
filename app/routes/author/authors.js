@@ -11,6 +11,7 @@ export default Route.extend({
       this.transitionTo('author');
     }else {
       return{
+        author,
         books,
         authorName,
         auxnum,

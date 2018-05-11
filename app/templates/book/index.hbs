@@ -20,18 +20,18 @@
           {{book.datePublished}}
         </td>
         <td>
-
+          {{#link-to 'book.books.edit' book.id}}
             <button class="btn waves-effect waves-light" type="submit" name="action">Edit
               <i class="material-icons right">send</i>
             </button>
-
+          {{/link-to}}
         </td>
         <td>
-
+          {{#link-to 'book.books.delete' book.id}}
             <button class="btn waves-effect waves-light" type="submit" name="action">Delete
               <i class="material-icons right">send</i>
             </button>
-          
+          {{/link-to}}
         </td>
       </tr>
     </tbody>

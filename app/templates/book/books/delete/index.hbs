@@ -1,0 +1,14 @@
+<h1>Are you sure that you want delete this book? </h1>
+<td>
+  <button class="btn waves-effect waves-light" type="submit" name="action" {{action 'delete' model}}>Yes Delete
+    <i class="material-icons right">send</i>
+  </button>
+</td>
+<td>
+  {{#link-to 'book'}}
+    <button class="btn waves-effect waves-light" type="submit" name="action">No Delete
+      <i class="material-icons right">send</i>
+    </button>
+  {{/link-to}}
+</td>
+{{outlet}}
